@@ -161,10 +161,18 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                                     isPowerOn = value;
                                   });
                                 },
-                                activeTrackColor: const Color(0xFFE63946).withValues(alpha: 0.5),
-                                activeThumbColor: const Color(0xFFE63946),
-                                inactiveThumbColor: Colors.grey[400],
-                                inactiveTrackColor: Colors.grey[300],
+                                thumbColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return const Color(0xFFE63946);
+                                  }
+                                  return Colors.grey[400];
+                                }),
+                                trackColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return const Color(0xFFE63946).withValues(alpha: 0.5);
+                                  }
+                                  return Colors.grey[300];
+                                }),
                               ),
                             ),
                           ],
@@ -205,10 +213,18 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                                     isAutomaticMode = value;
                                   });
                                 },
-                                activeTrackColor: const Color(0xFFE63946).withValues(alpha: 0.5),
-                                activeThumbColor: const Color(0xFFE63946),
-                                inactiveThumbColor: Colors.grey[400],
-                                inactiveTrackColor: Colors.grey[300],
+                                thumbColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return const Color(0xFFE63946);
+                                  }
+                                  return Colors.grey[400];
+                                }),
+                                trackColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return const Color(0xFFE63946).withValues(alpha: 0.5);
+                                  }
+                                  return Colors.grey[300];
+                                }),
                               ),
                             ),
                           ],
