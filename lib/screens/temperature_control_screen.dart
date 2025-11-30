@@ -161,7 +161,8 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                                     isPowerOn = value;
                                   });
                                 },
-                                activeColor: const Color(0xFFE63946),
+                                activeTrackColor: const Color(0xFFE63946).withValues(alpha: 0.5),
+                                activeThumbColor: const Color(0xFFE63946),
                                 inactiveThumbColor: Colors.grey[400],
                                 inactiveTrackColor: Colors.grey[300],
                               ),
@@ -204,7 +205,8 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                                     isAutomaticMode = value;
                                   });
                                 },
-                                activeColor: const Color(0xFFE63946),
+                                activeTrackColor: const Color(0xFFE63946).withValues(alpha: 0.5),
+                                activeThumbColor: const Color(0xFFE63946),
                                 inactiveThumbColor: Colors.grey[400],
                                 inactiveTrackColor: Colors.grey[300],
                               ),
