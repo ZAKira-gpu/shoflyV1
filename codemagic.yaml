@@ -7,13 +7,6 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      vars:
-        # Uncomment and set these if you have code signing
-        # BUNDLE_ID: "com.yourcompany.chauffly"
-        # APP_STORE_CONNECT_ISSUER_ID: your_issuer_id
-        # APP_STORE_CONNECT_KEY_IDENTIFIER: your_key_id
-        # APP_STORE_CONNECT_PRIVATE_KEY: Secure environment variable
-        # CERTIFICATE_PRIVATE_KEY: Secure environment variable
     
     scripts:
       - name: Set up code signing settings on Xcode project
