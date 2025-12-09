@@ -87,7 +87,7 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'SEE',
+                            'SET',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -145,11 +145,11 @@ class _TemperatureControlScreenState extends State<TemperatureControlScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${targetTemp.toInt()}°C',
-                              style: const TextStyle(
+                              isPowerOn ? 'ON' : 'OFF',
+                              style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                                color: isPowerOn ? const Color(0xFFE63946) : Colors.grey[600],
                               ),
                             ),
                             Transform.scale(
